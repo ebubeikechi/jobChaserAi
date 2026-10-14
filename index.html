@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#060818">
+<title>JobChaser AI | Your dream job is one click away</title>
+<meta name="description" content="AI-powered job discovery. Jobs matched to your criteria. Less scrolling, more earning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <div class="glow"></div>
+  <span class="sph far" style="--x:-14%;--y:6%;--s:150px;--d:14;--t:11s;--a:#3d6bff;--b:#101a6b"><i></i></span>
+  <span class="sph" style="--x:78%;--y:9%;--s:74px;--d:34;--t:7s;--a:#9b5cff;--b:#33157a"><i></i></span>
+  <span class="sph" style="--x:6%;--y:58%;--s:52px;--d:40;--t:6s;--a:#2ee6c9;--b:#0a5d63"><i></i></span>
+  <span class="sph far" style="--x:70%;--y:64%;--s:190px;--d:18;--t:13s;--a:#7b4dff;--b:#1a0f55"><i></i></span>
+  <span class="sph" style="--x:88%;--y:38%;--s:38px;--d:50;--t:5s;--a:#ff7a8a;--b:#7a1d3c"><i></i></span>
+  <span class="sph" style="--x:40%;--y:88%;--s:64px;--d:30;--t:8s;--a:#4d7cff;--b:#16257f"><i></i></span>
+</div>
+
+<header class="top">
+  <div class="brand"><span class="logo"></span>JobChaser AI</div>
+  <span class="pill"><span class="dot"></span>AI Search Engine Ready</span>
+</header>
+
+<main id="app">
+  <div class="sr" aria-live="polite" id="live"></div>
+
+  <section class="scene" id="s-start" data-stage>
+    <p class="pill tick"><span class="dot"></span><span id="ticker">Searching the job market at suspicious speeds.</span></p>
+    <h1 tabindex="-1"><span class="w" style="--i:0">Your</span> <span class="w" style="--i:1">Dream</span> <span class="w" style="--i:2">Job</span> <span class="w" style="--i:3">Is</span> <span class="w grad" style="--i:4">One</span> <span class="w grad" style="--i:5">Click</span> <span class="w grad" style="--i:6">Away.</span></h1>
+    <p class="sub">AI-powered job discovery. Jobs matched to your criteria. Less scrolling, more earning.</p>
+    <div class="bubble" id="bubble"><span id="q">Ready to find your dream job?</span></div>
+    <div class="arena" id="arena"><button class="orb" id="go" type="button">Start My Job Search 🚀</button></div>
+    <div class="foot">
+      <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+      <span class="small" id="steps">Step 0 of 3</span>
+      <button class="ghost" id="skip" type="button">Can't catch it? Skip the chase</button>
+    </div>
+  </section>
+
+  <section class="scene mid" id="s-load" data-stage hidden>
+    <div class="blobwrap"><div class="blob"></div><i class="sat"></i><i class="sat two"></i></div>
+    <h2 tabindex="-1" class="sr">Running your search</h2>
+    <div class="bubble msgb"><span id="msg">Negotiating with the LinkedIn algorithm...</span></div>
+    <p class="small" id="slow" hidden>Taking longer than usual. The workflow is still running.</p>
+  </section>
+
+  <section class="scene mid" id="s-err" data-stage hidden>
+    <div class="blob bad"></div>
+    <h2 tabindex="-1" id="et">Something broke</h2>
+    <p class="sub" id="em">We couldn't reach the job search. Try again.</p>
+    <button class="orb small-orb" id="retry" type="button">Try again</button>
+  </section>
+
+  <section class="scene wide" id="s-res" data-stage hidden>
+    <div class="twist">
+      <h2 tabindex="-1">Plot twist! 😂 This search was personalised for Ebube Ikechi.</h2>
+      <p id="note"></p>
+      <span class="chip" id="count" hidden></span>
+    </div>
+    <span class="chip warn" id="demo" hidden>Demo mode: sample jobs</span>
+    <ul class="jobs" id="jobs"></ul>
+    <div class="share">
+      <h2>Help Another Job Seeker Get Pranked 😂</h2>
+      <button class="orb small-orb hot" id="share" type="button">Share this page</button>
+      <a class="orb small-orb cool" id="li" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+    </div>
+  </section>
+</main>
+<footer class="small">Built for fun by Ebube Ikechi. The jokes are fake. The jobs are real.</footer>
+<div class="conf" id="conf" aria-hidden="true"></div>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
