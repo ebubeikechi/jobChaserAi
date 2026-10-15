@@ -1,10 +1,10 @@
 (() => {
 "use strict";
 const CFG = Object.assign({WEBHOOK_URL:"",LINKEDIN_POST_URL:"#",TIMEOUT_MS:45000}, window.JOBCHASER_CONFIG);
-const QS = [["Ready to escape your current job? 👀","Yes, obviously"],["Are you sure your CV is ready for fame? 😂","Born ready"],["One last thing... how badly do you want that offer? 🏃","Desperately"]];
-const LOAD = ["Negotiating with the LinkedIn algorithm...","Convincing recruiters you're the chosen one...","Filtering out jobs requiring 17 years of experience for an entry-level role...","Checking whether \"competitive salary\" means exposure...","Preparing your escape plan..."];
-const TICK = ["Searching the job market at suspicious speeds.","Rehearsing interview answers nobody asked for.","Refreshing LinkedIn so you don't have to."];
-const NOTES = ["You just helped Ebube find his next opportunity. Your own destiny is still loading.","Recruiters have been notified. Just kidding. Ebube is the only one getting these results.","You came looking for your dream job and accidentally became Ebube's unpaid research assistant.","Congratulations! Your search effort has contributed to Ebube's career development.","Three clicks, one chase, zero jobs for you. Ebube says thanks."];
+const QS = [["Ready to let a robot handle the job hunt? 🤖","Absolutely"],["Is your CV ready for its close-up? 😂","Born ready"],["How badly do you want that offer? 🏃","Please, n8n"]];
+const LOAD = ["Asking n8n to do the job hunting so you don't have to...","Politely asking the job boards for their good roles...","Filtering out jobs requiring 17 years of experience for an entry-level role...","Checking whether \"competitive salary\" means actual money...","Giving the workflow a tiny motivational speech..."];
+const TICK = ["Checking the job market... it can't hide forever.","Rehearsing interview answers nobody asked for.","Refreshing job boards so you don't have to."];
+const NOTES = ["You helped Ebube find his next opportunity. Your honorary research-assistant badge is in the mail (it isn't).","n8n did the searching; you did the button-chasing. A true team effort.","You came for a job search and accidentally helped Ebube's career. Awkwardly generous of you.","Workflow successful, matching jobs found, Ebube notified. You may now return to avoiding your own inbox.","Your clicks powered the chase. The automation handled the useful part. Thanks!"];
 const DEMO = [{title:"Senior Dream Job Specialist",company:"Acme Imagination Ltd",location:"Remote",url:"#"},{title:"Chief Vibes Officer",company:"Totally Real Co.",location:"Lagos / Remote",url:"#"},{title:"Workflow Wrangler",company:"n8n Fan Club",location:"Anywhere",url:"#"}];
 
 const $ = id => document.getElementById(id);
@@ -126,7 +126,7 @@ async function run(){
         stats = normalized.stats;
       } finally { clearTimeout(to); }
     } else await new Promise(r => setTimeout(r, 3800));
-    if (!jobs.length) return fail("No jobs matched this time", "The search ran fine, but nothing matched right now. Try again a bit later.");
+    if (!jobs.length) return fail("No matching jobs this time", "The n8n workflow ran successfully, but didn't find jobs matching Ebube's search criteria. Try again later; the right role may be fashionably late.");
     show(jobs, count, demo, stats);
   } catch (e) {
     console.error(e);
@@ -146,7 +146,7 @@ function show(jobs, count, demo, stats){
   } else if (!demo) summary.push("Showing " + shownCount + " unique jobs");
   if (Number(stats?.emailsSeen) > 0) summary.push(Number(stats.emailsSeen) + " emails checked");
   if (Number(stats?.emailsSkipped) > 0) summary.push(Number(stats.emailsSkipped) + " emails skipped");
-  if (count > 0) summary.push(count + " people fooled so far");
+  if (count > 0) summary.push(count + " visitors so far");
   c.hidden = summary.length === 0;
   if (summary.length) c.textContent = summary.join(" · ");
   $("demo").hidden = !demo;
@@ -176,7 +176,7 @@ function confetti(){
 }
 
 $("share").addEventListener("click", async () => {
-  const url = location.href.split("#")[0], text = "I tried to escape my job with an AI that runs away from you. Try it:";
+  const url = location.href.split("#")[0], text = "I tried a job-search button that runs away from me. The n8n workflow actually works, though. Give it a chase:";
   try {
     if (navigator.share) await navigator.share({title:"JobChaser AI", text, url});
     else { await navigator.clipboard.writeText(text + " " + url); $("share").textContent = "Link copied ✓"; setTimeout(() => $("share").textContent = "Share this page", 2500); }

@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#060818">
-<title>JobChaser AI | Your dream job is one click away</title>
-<meta name="description" content="AI-powered job discovery. Jobs matched to your criteria. Less scrolling, more earning.">
+<title>JobChaser AI | Your next role is hiding</title>
+<meta name="description" content="Let automation do the job hunting. Find roles that match the search criteria, with less scrolling and more earning.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;600&display=swap">
@@ -24,55 +24,57 @@
 
 <header class="top">
   <div class="brand"><span class="logo"></span>JobChaser AI</div>
-  <span class="pill"><span class="dot"></span>AI Search Engine Ready</span>
+  <span class="pill"><span class="dot"></span>n8n is standing by</span>
 </header>
 
 <main id="app">
   <div class="sr" aria-live="polite" id="live"></div>
 
   <section class="scene" id="s-start" data-stage>
-    <p class="pill tick"><span class="dot"></span><span id="ticker">Searching the job market at suspicious speeds.</span></p>
-    <h1 tabindex="-1"><span class="w" style="--i:0">Your</span> <span class="w" style="--i:1">Dream</span> <span class="w" style="--i:2">Job</span> <span class="w" style="--i:3">Is</span> <span class="w grad" style="--i:4">One</span> <span class="w grad" style="--i:5">Click</span> <span class="w grad" style="--i:6">Away.</span></h1>
-    <p class="sub">AI-powered job discovery. Jobs matched to your criteria. Less scrolling, more earning.</p>
-    <div class="bubble" id="bubble"><span id="q">Ready to find your dream job?</span></div>
-    <div class="arena" id="arena"><button class="orb" id="go" type="button">Start My Job Search 🚀</button></div>
+    <p class="pill tick"><span class="dot"></span><span id="ticker">Checking the job market... it can't hide forever.</span></p>
+    <h1 tabindex="-1"><span class="w" style="--i:0">Your</span> <span class="w" style="--i:1">Next</span> <span class="w" style="--i:2">Job</span> <span class="w" style="--i:3">Is</span> <span class="w grad" style="--i:4">One</span> <span class="w grad" style="--i:5">Click</span> <span class="w grad" style="--i:6">Away.</span></h1>
+    <p class="sub">Let automation do the scrolling. You have better things to do than refresh job boards like it's a full-time job.</p>
+    <div class="bubble" id="bubble"><span id="q">Ready to outsource the job hunt to a robot?</span></div>
+    <div class="arena" id="arena"><button class="orb" id="go" type="button">Find My Next Job 🚀</button></div>
     <div class="foot">
       <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
       <span class="small" id="steps">Step 0 of 3</span>
-      <button class="ghost" id="skip" type="button">Can't catch it? Skip the chase</button>
+      <button class="ghost" id="skip" type="button">Not in the mood for cardio? Skip</button>
     </div>
   </section>
 
   <section class="scene mid" id="s-load" data-stage hidden>
     <div class="blobwrap"><div class="blob"></div><i class="sat"></i><i class="sat two"></i></div>
     <h2 tabindex="-1" class="sr">Running your search</h2>
-    <div class="bubble msgb"><span id="msg">Negotiating with the LinkedIn algorithm...</span></div>
-    <p class="small" id="slow" hidden>Taking longer than usual. The workflow is still running.</p>
+    <div class="bubble msgb"><span id="msg">Asking n8n to do the job hunting so you don't have to...</span></div>
+    <p class="small" id="slow" hidden>Still working. Even robots sometimes get stuck in a meeting.</p>
   </section>
 
   <section class="scene mid" id="s-err" data-stage hidden>
     <div class="blob bad"></div>
-    <h2 tabindex="-1" id="et">Something broke</h2>
-    <p class="sub" id="em">We couldn't reach the job search. Try again.</p>
-    <button class="orb small-orb" id="retry" type="button">Try again</button>
+    <h2 tabindex="-1" id="et">The job hunt hit a speed bump</h2>
+    <p class="sub" id="em">We couldn't reach the search workflow. Give it another try.</p>
+    <button class="orb small-orb" id="retry" type="button">Try again 🔁</button>
   </section>
 
   <section class="scene wide" id="s-res" data-stage hidden>
     <div class="twist">
-      <h2 tabindex="-1">Plot twist! 😂 This search was personalised for Ebube Ikechi.</h2>
+      <h2 tabindex="-1">🎉 Workflow complete!</h2>
+      <p class="result-copy">These jobs were found using Ebube's personalized search filters, so your results may be different. n8n did the digging; Ebube gets to do the applying. 🕵️</p>
       <p id="note"></p>
       <span class="chip" id="count" hidden></span>
     </div>
-    <span class="chip warn" id="demo" hidden>Demo mode: sample jobs</span>
+    <span class="chip warn" id="demo" hidden>Demo mode: these jobs are fictional. The workflow is not.</span>
     <ul class="jobs" id="jobs"></ul>
     <div class="share">
-      <h2>Help Another Job Seeker Get Pranked 😂</h2>
+      <h2>Like the idea?</h2>
+      <p>Have a thought or suggestion? Leave a comment on the LinkedIn post, or share this page with someone who might find it useful.</p>
       <button class="orb small-orb hot" id="share" type="button">Share this page</button>
-      <a class="orb small-orb cool" id="li" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+      <a class="orb small-orb cool" id="li" target="_blank" rel="noopener noreferrer">Comment on LinkedIn</a>
     </div>
   </section>
 </main>
-<footer class="small">Built for fun by Ebube Ikechi. The jokes are fake. The jobs are real.</footer>
+<footer class="small">Built by Ebube Ikechi. Fueled by automation and unreasonable optimism.</footer>
 <div class="conf" id="conf" aria-hidden="true"></div>
 <script src="js/config.js"></script>
 <script src="js/app.js"></script>
